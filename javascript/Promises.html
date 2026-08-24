@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            gap: 20px;
+        }
+        .box{
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 20px;
+            gap: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // console.log("one")
+        // console.log("two")
+        // console.log("three")
+
+        // console.log("dukan pr jana");
+
+        // setTimeout(()=>{
+        //     console.log("coldrink khareedni thi")
+        // }, 4000)
+
+        // setTimeout(()=>{
+        //     console.log("ghar waps aa gye")
+        // }, 2000)
+
+        // console.log("coldrink pee liya")
+
+
+        // Promises --> Promises are used to handle Asynchronus operation(task) . it takes a callback function with two arguments resolve and reject. promises have three states pending, fulfilled and rejected. if a promise is fullfilled you can get your output in (.then) part if promise is rejected you can get your output in (.catch) part
+
+        // print the sum of array if array lengt is greater than 3 using promises
+        // let arr = [10, 20,30, 40];
+
+        // let  x = new Promise((resolve, reject) => {
+        //         if(arr.length > 3){
+        //             let sum = 0;
+        //             for(let i=0; i<arr.length; i++){
+        //                 sum =sum + arr[i]
+        //             }
+        //             resolve(sum)
+        //         }
+        //         else{
+        //             reject("can not print sum :array length is less than 3")
+        //         }
+        // })
+
+        // x.then((ans)=>console.log(ans))
+        // .then(()=>console.log("hello"))
+        // .catch((ans)=>console.log(ans))
+
+        // console.log("hello")
+
+
+        // let x = fetch('api')
+        // let x = fetch('https://dummyjson.com/products')
+        // x.then((ans)=>ans.json())
+        // .then((ans)=>console.log(ans.products))  //{}
+        // .catch((ans)=>console.log(ans))
+
+        async function xyz(){
+            let x = await fetch('https://dummyjson.com/products')
+            let data = await x.json();
+            console.log(data) // {products:[]}
+            console.log(data.products) //[{},{},{}...30]
+
+            let bodyTag = document.querySelector('body')
+            data.products.forEach((val , i)=>{
+                // console.log(val)
+                // console.log(val.title)
+                // console.log(val.thumbnail)
+                let divTag = document.createElement('div')
+                let imagetag = document.createElement('img')
+                let para = document.createElement('h3')
+                let buttonTag = document.createElement('button')
+
+                buttonTag.innerHTML = "add to cart"
+                divTag.className = "box"
+                imagetag.src = val.thumbnail
+                para.innerHTML = val.title
+                divTag.append(imagetag, para , buttonTag)
+                bodyTag.append(divTag)
+            })
+
+        }
+        xyz()
+ 
+       
+
+       
+
+    </script>
+</body>
+</html>

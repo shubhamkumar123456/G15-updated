@@ -1,0 +1,22 @@
+h2{
+            background-color: brown;
+            color: white;
+        }
+
+        /* p{
+            background-color: blueviolet;
+        } */
+
+        #one{
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .a{
+            background-color: yellow;
+            color: teal;
+        }
+
+        strong{
+            background-color: yellow !important;
+        }

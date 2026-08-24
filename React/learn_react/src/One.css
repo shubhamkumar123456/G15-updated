@@ -1,0 +1,16 @@
+.heading{
+  text-align: center;
+  color: black;
+  background-color: aqua;
+}
+
+
+.box{
+    position: relative;
+}
+
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
