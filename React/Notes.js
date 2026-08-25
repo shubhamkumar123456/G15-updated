@@ -20,4 +20,11 @@
 
 // Hooks --> hooks are functions that are used to define states in your react application . for example --> useState, useRef , useEffect , useReducer etc
 
-// a) useState Hook --> 
+// a) useState Hook --> used to store a value (state) or can also be used to re-render of component. it takes a array of two arguments first a variable and second is a function. that function is used to update the value of variable . and whenever that function is called react re-render the whole component
+
+// Spread Operator --> used to copy the array or object into new array or object example --> 
+        // let arr = [10, 20, 30, 40];
+        // let copyArr = [...arr] // [10, 20, 30, 40]
+
+//b) useRef --> useRef hook is used to copy any react element(copy the reference(address) of any react element)
+
