@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const ExpenseTracker = () => {
+
+    let expenseRef = useRef(); //{current : undefined}
+    let priceRef = useRef(); //{current : undefined}
+    let dateRef = useRef(); //{current : undefined}
+
     let expenseData = [
         {id:1 , expenseName:"movies" , price:250,date:"24-08-26"},
         {id:2 , expenseName:"petrol" , price:500,date:"23-08-26"},
@@ -10,15 +15,21 @@ const ExpenseTracker = () => {
     ]
     function handleAddExpense(e){
         e.preventDefault();
-        console.log("running");
+        
+        let obj = {
+            expenseName:expenseRef.current.value,
+            price:priceRef.current.value,
+            date:dateRef.current.value
+        }
+        console.log(obj)
     }
   return (
     <div>
       <h1 className='expenseHeading'>Expense Tracker App</h1>
             <form action="">
-                <input type="text" placeholder='expense Name' />
-                <input type="text" placeholder='enter price' />
-                <input type="date" />
+                <input ref={expenseRef} type="text" placeholder='expense Name' />
+                <input ref={priceRef} type="text" placeholder='enter price' />
+                <input ref={dateRef} type="date" />
                 <button onClick={handleAddExpense}>Add Expense</button>
             </form>
         <table border={1} cellSpacing={0}>
