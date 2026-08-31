@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useState } from 'react';
 
 const ExpenseTracker = () => {
 
@@ -6,22 +7,48 @@ const ExpenseTracker = () => {
     let priceRef = useRef(); //{current : undefined}
     let dateRef = useRef(); //{current : undefined}
 
-    let expenseData = [
+    // let expenseData = [
+    //     {id:1 , expenseName:"movies" , price:250,date:"24-08-26"},
+    //     {id:2 , expenseName:"petrol" , price:500,date:"23-08-26"},
+    //     {id:3 , expenseName:"Dinner" , price:500,date:"22-08-26"},
+    //     {id:4 , expenseName:"zoo" , price:1500,date:"22-08-26"},
+    // ]
+
+    const [expenseData , setExpenseData] = useState(
+        [
         {id:1 , expenseName:"movies" , price:250,date:"24-08-26"},
         {id:2 , expenseName:"petrol" , price:500,date:"23-08-26"},
         {id:3 , expenseName:"Dinner" , price:500,date:"22-08-26"},
         {id:4 , expenseName:"zoo" , price:1500,date:"22-08-26"},
-
     ]
+    )
     function handleAddExpense(e){
         e.preventDefault();
         
         let obj = {
+            id: expenseData.length+1,
             expenseName:expenseRef.current.value,
             price:priceRef.current.value,
             date:dateRef.current.value
         }
+        // console.log(obj)
+        // expenseData.push(obj)
+        // console.log(expenseData)
+
+        let copyArr = [...expenseData] // [{} , {} , {} ,[]]
+        copyArr.push(obj);              // [ {} , {} , { } , {}, {}]
+
+        setExpenseData(copyArr)
+        // setExpenseData([...expenseData , obj])
+    }
+
+    function handleDelete(obj , i){
         console.log(obj)
+        console.log(i)
+
+        let copyArr = [...expenseData] //copy old array into new array
+        copyArr.splice(i , 1) //updated array
+        setExpenseData(copyArr)
     }
   return (
     <div>
@@ -49,7 +76,7 @@ const ExpenseTracker = () => {
                         <td>{val.expenseName}</td>
                         <td>{val.price}</td>
                         <td>{val.date}</td>
-                        <td><button>delete</button></td>
+                        <td><button onClick={()=>handleDelete(val, i)}>delete</button></td>
                     </tr>
                })}
             </tbody>
