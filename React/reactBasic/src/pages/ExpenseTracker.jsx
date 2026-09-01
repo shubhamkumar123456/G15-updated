@@ -48,7 +48,7 @@ const ExpenseTracker = () => {
 
         let copyArr = [...expenseData] //copy old array into new array
         copyArr.splice(i , 1) //updated array
-        setExpenseData(copyArr)
+        setExpenseData(copyArr);
     }
   return (
     <div>
