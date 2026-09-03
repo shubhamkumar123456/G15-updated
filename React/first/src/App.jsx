@@ -8,6 +8,8 @@ import Counter from './Counter'
 import ConditionPage from './ConditionPage'
 import FormPage from './FormPage'
 import { FaFacebook } from "react-icons/fa";
+import Form1 from './Form1'
+import Form2 from './Form2'
 // import X from './Demo'
 
 function App() {
@@ -31,14 +33,18 @@ function App() {
       {/* <Demo/> */}
       {/* <Counter/> */}
 
-<FaFacebook />
+{/* <FaFacebook />
       <button>Show Dummy Page</button>
       <button>Show Counter Page</button>
       <button onClick={handleCondition}>Show Conditional Page</button>
 
-     { x &&<ConditionPage/>}
+     { x &&<ConditionPage/>} */}
      
-     <FormPage/>
+     {/* <FormPage/> */}
+     {/* <Form1/> */}
+
+     <Form2/>
+
 
     </>
   )
