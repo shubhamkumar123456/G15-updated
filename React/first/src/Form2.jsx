@@ -10,11 +10,11 @@ const Form2 = () => {
 
     function handleChanger(e){
         // console.log("hello")
-        console.log(e.target)  //tag
-        console.log(e.target.value)
+        console.log(e.target); //tag
+        console.log(e.target.value);
     }
 
-    
+
   return (
     <div>
       <h1>This is uncontrolled component</h1>
@@ -38,7 +38,6 @@ const Form2 = () => {
                 <option value="CSS">CSS</option>
                 <option value="Java script">Java script</option>
         </select> <br />
-
         <button onClick={handleSubmit}>Submit</button>
 
 
