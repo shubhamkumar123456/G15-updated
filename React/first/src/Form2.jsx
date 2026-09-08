@@ -1,37 +1,43 @@
 import React from 'react'
-import { useRef } from 'react'
+import { useState } from 'react';
+
 
 const Form2 = () => {
+
+  const [details, setdetails] = useState({
+    name:"",
+    email:"",
+    password:"",
+    language:""
+  });
     
     function handleSubmit(e){
         e.preventDefault();
-        console.log("running")
+        console.log(details)
     }
-
     function handleChanger(e){
         // console.log("hello")
-        console.log(e.target); //tag
-        console.log(e.target.value);
+        // console.log(e.target); //tag  = 
+        // console.log(e.target.name)  // name attribute value =
+        // console.log(e.target.value);// tag value  = 
+        setdetails({...details , [e.target.name]:e.target.value});
     }
 
 
   return (
     <div>
-      <h1>This is uncontrolled component</h1>
+      <h1>This is controlled component</h1>
       <form action="">
         <label htmlFor="">Name</label>
-        <input onChange={handleChanger} type="text" placeholder='enter name' /> <br />
+        <input  name='name' onChange={handleChanger} type="text" placeholder='enter name' /> <br />
 
         <label htmlFor="">Email</label>
-        <input onChange={handleChanger}  type="email" placeholder='enter email' /><br />
+        <input name="email" onChange={handleChanger}  type="email" placeholder='enter email' /><br />
 
-        <label htmlFor="">Gender:</label>
-        <label htmlFor="">Male</label>
-        <input onChange={handleChanger} value={'male'}  type="radio" name='gender' />
-        <label htmlFor="">Female</label>
-        <input onChange={handleChanger} value={'female'}  name='gender' type="radio" /><br />
+        <label htmlFor="">Password</label>
+        <input name="password" onChange={handleChanger} type="password" /> <br />
 
-        <select onChange={handleChanger} name="" id="">
+        <select onChange={handleChanger} name="language" id="">
                 <option value="">Select a language</option>
                 <option value="Python">Python</option>
                 <option value="HTML">HTML</option>

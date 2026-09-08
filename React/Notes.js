@@ -30,6 +30,6 @@
 
 // props --> with the help of props you can pass data from parent component to child component. props are read only they can not be changed by the child component
 
-// Controlled component --> 
+// Controlled component --> controlled component is a form element whose value is controlled by react state and onchange event
 
 // useEffect Hook --> 
