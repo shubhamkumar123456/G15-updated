@@ -10,6 +10,7 @@ import FormPage from './FormPage'
 import { FaFacebook } from "react-icons/fa";
 import Form1 from './Form1'
 import Form2 from './Form2'
+import EffectHook from './EffectHook'
 // import X from './Demo'
 
 function App() {
@@ -43,8 +44,10 @@ function App() {
      {/* <FormPage/> */}
      {/* <Form1/> */}
 
-     <Form2/>
+     {/* <Form2/> */}
 
+
+  <EffectHook/>
 
     </>
   )

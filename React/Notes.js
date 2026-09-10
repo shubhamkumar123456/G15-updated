@@ -32,4 +32,4 @@
 
 // Controlled component --> controlled component is a form element whose value is controlled by react state and onchange event
 
-// useEffect Hook --> 
+// useEffect Hook --> useEffect hook is used to run side effect such as updating the dom element , fetching api etc.

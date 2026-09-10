@@ -1,395 +1,496 @@
-// Javascript --> programming language used to write logic and funcvtionality in website. discoverd by Brandon Eich.  firstly it was named as MOCHA. later it was named as live script and then finally it is changed as Echma script(java script). current version of JS is ES6.
-
-
-// Before Node js , Js was used as client side only(only for frontend design). because JS runs in browser and browsers have Js Engine that run your JS code
-
-// for example -->Chrome uses V8 Js engine , Mozilla firefox uses Spider monkey js engine 
-
-// Node Js uses this V8 engine to run javascript code outside the Browser
-
-
-// Ways to Write Js --> internal , external
-
-// Topics --> 
-// Variable  --> done
-// Data types --> done
-// String and its method --> done
-// loops --> done
-// Array and its method --> done
-// Objects
+// Java script -->
+// Variables -->
+// Data types --> Primitive  & non-primitive
+// operators --> conditional , mathmatical, logical
+// String & its method
+// Array & its method
+// Loops
+// Object & methods 
 // functions
 // Callback function
-// Promises
-// Async Await
+
+// promises
+// Async await
 // DOM
-// Project
-
-//1) Variable --> variables are used to store the Data
-// How to declare a variable in jS --> let , var , const
-
-// example of let -->
-// A)
-//  let x = 20;
-// let x = 45;
-// console.log(x)  //can not redeclare in case of let
-
-// b)
-    // let b = 5;
-    //     b= 6
-    //     console.log(b) // reassign is possible in let
-
-// Example of var -->
- // A)
-//  var x = 20;
-// var x = 45;
-// console.log(x)  // redeclare in possible in var
-
-// b)
-    // var b = 5;
-    //     b= 6
-    //     console.log(b) // reassign is possible in var
-
-// Example of const -->
- // A)
-//  const x = 20;
-// const x = 45;
-// console.log(x)  // redeclare in not possible in case of const
-
-// b)
-    // const b = 5;
-    //     b= 6
-    //     console.log(b) // reassign is not possible in const
+// project
+// local Storage
 
 
 
-// DataType --> Primitive , NonPrimitive
+// Javascript --> used to write logic and functinality to a web page. with the help of js you can create dynamic website. first name of js was MOCHA. later it was name as Live script. currently it is named as ECHMA script. current version of js is (ES6)
 
-// a)Primitive --> can store single value only
-// Example --> number , string , boolean, undefined , null
-// Number -->
+// before Node js, js was used for client side only(used to create frontend only). because Js code runs on browser (browsers have js engine that run your js code).for example in Chrome the name of Js engine is V8
+
+// with the help of node js you can run your js code outside the browser(it uses the same V8 engine that chrome uses);
+
+
+// Variables --> are used to store the data or value;
+
+// How to decleare a variable in JS --> using let , var ,const
+// difference b/w let var and const --> 
+
+// let -->  in case of let you can not redeclare , but can reassign
     // let x = 10
-    // console.log(x)  //10
+    // let x = 5;
+    // console.log(x)  //output -->error
 
-// String -->
-    // let name = "shubham" //  'shubham' ,  `shubham`;
-    // console.log(name)
-    // console.log(typeof name)
-    // console.log(typeof x)
+    // let x = 10
+    //  x = 5;
+    // console.log(x)  // output --> 5
 
-    // let digit = "101";
-    // console.log(digit)
-    // console.log(typeof digit)
+  
 
-// Boolean --> true ,false
-// let a = true 
-// console.log(a)
-// console.log(typeof a)
+// Var  --> can be redeclare ,  and reassign both
+    // var x = 10;
+    // var x = 11;
+    // console.log(x) //output --> 11
 
-// Undefined --> it is a default value used by JS, when a variable is declared but its value is not defined it gives undefined
-    // let x;
-    // console.log(x)  //undefined
-
-// Null --> user defined that is equal to nothing
-
-// let x = null
-// console.log(x)
-// console.log(typeof x);  object
- 
-// How to check dataType -->using typeOf operator
+    // var x = 10;
+    //      x = 11;
+    // console.log(x) // output --> 11
 
 
-// NonPrimitive --> can store collection of data -->
-// example --> Array , Object
+// Const -->  can not redeclare ,  or reassign
+    // const x = 10;
+    // const x = 44;
+    // console.log(x)
 
-// Array --> can store collection of data in indexing form 
-// let arr = [ 1, 20, "hello", true , [4,5,6]]
-// console.log(arr[0]) //1
-// console.log(arr[1]) //20
-// console.log(arr[2]) // hello
-// console.log(arr[3]) // true
-// console.log(arr[4])  // [4,5,6]
-// console.log(arr[4][2])  //6
+    // const x = 10;
+    //     x = 44;
+    // console.log(x)
 
 
-// Object--> used to store collection of data in key and value form
-// example -->
-
-// let data = {
-//     name:"one",
-//     age:34,
-//     languages:['hindi', 'english', 'spanish'],
-//     details:{
-//         houseNo:2,
-//         city:"lucknow"
-//     }
-// }
-
-// console.log(data.name) // one
-// console.log(data['name']) // one
-// console.log(data.languages) //['hindi', 'english', 'spanish']
-// console.log(data.languages[2]) //spanish
-// console.log(data.details) // {houseNo:2, city:'lucknow'}
-// console.log(data.details.city) // lucknow
 
 
-// String methods --> 
-// a) length method --> 
-//  let text = "hello how are you"  
-//  console.log(text.length)  // 17
 
-//b) slice method --> can cut or copy a portion from the string
-// syntax --> slice(startIndex , endIndex) , end will cut 1 less
-//  let text = "hello how are you" ;
-//  let ans = text.slice(0, 9)
-//  console.log(ans)  //hello how
+//3) Data types --> Pritive and Non Primitive
+// a) Primitve --> can store single value only example --> Number, String, boolean, undefined , null
+        // let x = 10; //correct number
+        // // let y = 10, 11 // wrong
 
-//c) split method --> can convert a string into an array -->
-//  let text = "hello how are you"
-// //  ["hello how are you"]
-// // ["hello", "how", "are", "you"]
-// // ['h','e','l','l','o',' ','h'......]
-// let ans1 = text.split() //["hello how are you"]
-// console.log(ans1)
+        // let a = "hello";  // string
+        // // let a = "hello", "bye bye" //wrong string
+        // console.log(typeof x)
+        // console.log(typeof a)
 
-// let ans2 = text.split(' ');
-// console.log(ans2) //['hello', 'how', 'are', 'you']
+    // undefined -- >when a variable is decleared but its value is not assigned Js will give undefined
+        // let x;
+        // console.log(x)  // undefined
 
-// let ans3 = text.split('')
-// console.log(ans3) //['h', 'e', 'l', 'l', 'o', ' ', 'h', 'o', 'w', ' ', 'a', 'r', 'e', ' ', 'y', 'o', 'u']
+    // Null  --> it is a user defined value that is equal to nothing
 
 
-//d) trim method --> can remove extra spaces from string from start and end 
-//e) replace and replace all method
+// Non-primitive --> can store collection of data --> example --> Array, Object, function
 
-//f) includes --> can find given value is present inside string or not
+// Array --> can store collection of data in indexing form
+//  index --> 0     1         2     3
+    // let x = [10 , "hello" , true, "bye bye"]
+    // console.log(x)
+    // console.log(x[2])
 
-// let text = "hello how are you";
-// console.log(text.includes('areee'))// true or false
-
-//g) charAt method --> get any index value inside string
-// let text = "hello how are you";
-// console.log(text.charAt(4))  //o
-// console.log(text[4])  // o
-
-//h) toLowerCase or toUpperCase --> 
-// let text = "hello how are you";
-// console.log(text.toUpperCase()) //HELLO HOW ARE YOU
+    // let data = ["john" , 55 , 65 , "fullstack"];
 
 
-// ************Array MEthods **********************
-// a) length --> 
-    // let arr = ["hindi", "english", "maths", "art"];
-    // console.log(arr.length)  //4
-
-// b) slice -->slice(startIndex , endIndex)
-// let arr = ["hindi", "english", "maths", "art"];
-// let ans = arr.slice(0, 3)
-// console.log(ans)  //['hindi', 'english', 'maths']
-
-// c) push method --> can add an element at the last
-// let arr = ["hindi", "english", "maths", "art"];
-// arr.push(10);
-// arr.push(true);
-// console.log(arr) //["hindi", "english", "maths", "art", 10, true];
-
-// d) pop() --> can remove an element at the last
-// let arr = ["hindi", "english", "maths", "art"];
-// arr.pop();
-// console.log(arr)// ["hindi", "english", "maths"];
-
-// e)unshift --> can add an element at the start
-// f)shift --> can remove an element at the start
-
-// g)splice method --> can add or remove element at any place in array
-// syntax --> splice(startIndex , no of element count u want to remove , element name u want to add);
-
-// // 1) add at any place
-// let arr = ["hindi", "english", "maths", "art"];
-// arr.splice(3 , 0, "bye bye")
-// console.log(arr)
-
-// 2) remove at any place
-// let arr = ["hindi", "english", "maths", "art"];
-// arr.splice(1,2)
-// console.log(arr)
-
-// 3)mix case add and remove value or update a value --> 
-
-//  let arr = ["hindi", "english", "maths", "art"];
-//  arr.splice(2,1,"physics")
-// console.log(arr)
-
-// arr[2] = "physics";
-// console.log(arr)
-
-
-// loops --> for loop , while loop, do while loop
-
-//  let arr = ["hindi", "english", "maths", "art"];
-//  for(let i=0; i<arr.length; i++){
-//     console.log(arr[i])
-//  }
-
-// important array methods --> filter method , forEach , map method-->
-
-
-// *************************21-07-2026********************************
-// object methods -->
-//a) add or update or delete value in object -->
+// Object -->  can store collection of data in key and value form
 
     // let data = {
-    //     name:"one",
-    //     age:45
+    //     name:"john",
+    //     age:55,
+    //     marks:65,
+    //     course:"fullstack"
     // }
-    // delete data.age;
 
     // console.log(data)
+    // console.log(data.course) // fullstack
+    // console.log(data['course']) // fullstack
 
-    // data.course  = "fullstack";
-    // data.age = 33;
+    // let user  = {
+    //     name:"one",
+    //     email:"one@gmail.com",
+    //     languages:['hindi', 'english', 'spanish'],
+    //     details:{
+    //         houseNo:10,
+    //         city:"lucknow"
+    //     }
+    // }
 
-    // console.log(data)  //{name:"one", age:33 ,course:"fullstack"}
+    // let arr = [10 , true , {name:"one", age:45} , [4, 5, 6]]; 
+    // console.log(arr[3]) //[4, 5, 6]
+    // console.log(arr[3][1]) // 5
+    // console.log(arr[2]) //{name:"one", age:45}
+    // console.log(arr[2].age) //45
 
-//b) convert Object into string --> JSON.stringify() , JSON.parse()
+// https://github.com/shubhamkumar123456/G14
 
-// let data = {
-//     name:"one",
-//     age:10,
-//     course:"fullstack"
-// }
 
-// let ans = JSON.stringify(data) // covert obj into string
+// ***********************************************************************************
+// String & its methods --> "" , '' , ``
+
+// let firstName = 'john';
+// let lastName = "Xyz";
+//                 // 'john' + "Xyz"
+// let fullName = firstName+" " + lastName  //  "john Xyz"
+// console.log(fullName)//  "johnXyz"
+
+// let ans = `${firstName} ${lastName}`;
 // console.log(ans)
-// console.log(typeof ans)
-// console.log(ans[0])
 
+// 1) length method & charAt method --> 
+        // let text = "hello how are you" //
+        // console.log(text.length)//17
+        // console.log(text[4])  // o
+        // console.log(text.charAt(4))  //o
 
-// let ans2 = JSON.parse(ans);
-// console.log(ans2)
+// 2) toUpperCase and toLowerCase -->
+    // let text = "hello how are you" //
+    // console.log(text.toUpperCase())//HELLO HOW ARE 
+    
+// 3)Slice method --> can cut or copy a portion from a string and return a new string(it do not change in original string)
+    // Syntax --> Slice(startIndex , EndIndex), end will always cut 1 less
+        // let text = "hello how are you" //
+        // let ans = text.slice(6, 13)
+        // console.log(ans)
 
+// Split method --> can convert an String into an array;
+    // let text = "hello how are you" //
+    // [ "hello how are you" ]
+    // ["hello" , "how" , "are" , "you"]
+    // ["h", "e", "l", "l", "o"," ", "h" ....]
 
-// **************************
+    // let ans  = text.split();  //['hello how are you']
+    // console.log(ans)  
 
-// Function --> are reusable piece of code used to perform a specific task. a function only run when something invokes it (call it)
+    // let ans1 = text.split(" ");//['hello', 'how', 'are', 'you']
+    // console.log(ans1)
 
-// example of function -->
-// data recieved in function decleration is known as parameters 
-    // function sum(a , b , c ){  // function decleration
-    //     console.log("all is well")
-    //     console.log(a)
-    //     console.log(b)
-    //     console.log(c)
-    // }
-    // sum(10 , [4,5,6] , {name:"one"}) // function calling
-// data passed in function calling is known as arguments
-// let a = 10;
-// let b = 5;
-// console.log(a+b)
-// console.log(a*b)
+    // let ans2 = text.split(''); //
+    // console.log(ans2) //['h', 'e', 'l', 'l', 'o', ' ', 'h', 'o', 'w', ' ', 'a', 'r', 'e', ' ', 'y', 'o', 'u']
 
-// let x = 1;
-// let y = 5;
-// console.log(x)
-// console.log(y)
+// Includes Method --> can search anything in string and return boolean value
+//  let text = "hello how are you" //
+//  console.log(text.includes('you')) // true
 
-// let z = 88;
-// let r = 5;
-// console.log(z+r)
-// console.log(z*r)
+// Trim Method -->  removes extra spaces from string
+// let text = "             hello how are you        "
+// console.log(text.length) //38
 
+// let ans = text.trim()// 
+// console.log(ans)  //"hello how are you"
+// console.log(ans.length) //17
 
-// Arrow function  --> 
+// replace  --> can replace any value inside string;
 
-    // let a = 10;
-    // let b = "" // [] , {}
+// let text = "virat kohli is Virat"
 
-    //function expression( when a function is used as a variable)
-    // let c = function(){ 
-    //     console.log("running")
-    // }
-    // c()
+// let ans = text.replace('virat' , 'king');
+// console.log(ans)
 
-    // in case of arrow function we do not use function key word we use arrows. introduced in ES6
-    // let print = ()=>{ // this is arrow function
-    //     console.log("i am arrow function")   
-    // }
-    // print()
-
-
-
-
-// Important*******
-// CallBack functions -->  functions that are passed into another function are known as CB function
-
-// function that take another function as an argument are known as HOF(higher order function)
-
-// function one(){
-//     console.log("i am one")
-// }
-
-// function two(a,b,c){
-//     console.log(a)
-//     console.log(b)
-//     c()
-// }
-
-// two(10, "hello" , one )
-// console.log(one)
-
-
-// Timer fuctions  --> setTimeout , setInterval
-// Syntax --> setInterval(cb , time(ms))
-
-// let count = 0
-// setInterval(function(){
-//     count++;
-//     // console.log("hello " + count)
-//     console.log(`hello ${count}`)
-// } , 3000)
-
-// let count = 0
-// setInterval(()=>{
-//     count++;
-//     // console.log("hello " + count)
-//     console.log(`hello ${count}`)
-// } , 3000)
-
-
-// filter method , map method , forEach method --> 
-// forEach --> used to traverse through an array
-// let arr = [10, 20, 30, 50 ,90];
-// arr.forEach((val, i)=>{
-//     console.log(val, i)
-// })
-
-// map method --> used to travers  through an array and can also return a new array;
-// let arr = [10, 20, 30, 50 ,90];
-// arr.map((val, i)=>{
-//     console.log(val, i)
-// })
-// let arr = [10, 20, 30, 50 ,90];
-
-// let ans = arr.map((val, i)=>{  //[11, 21, 31, 51, 91]
-//         return val+1
-// })
+//  g --> search globally
+// i -> insensitive case
+// let ans = text.replace(/virat/gi , 'king')
 // console.log(ans)
 
 
-// filter method --> can filter out any value 
-// let arr = [10, 20, 30, 50 ,90];
-// let ans = arr.filter((val)=> val!= 40);
+// let text = "hello      all            is       well"//helloalliswell
+// let ans = text.replace(/ /g , '');
 // console.log(ans)
 
-// find the name of products whose name is between 10 to 40 thousand including 10 and 20;
 
-// let arr = [
-//     {name:"iphone" , price:80000, rating:2}, //0
-//     {name:"samsung" , price:50000, rating:4}, //1
-//     {name:"x-box" , price:10000, rating:5}, //2
-//     {name:"realme" , price:35000, rating:3}, //3
-//     {name:"oppo" , price:25000, rating:2.5}, //4
-//     {name:"nokia" , price:45000, rating:4.5}, //5
+
+
+// Array and its Methods --> 
+// a) length --> 
+    // let arr = ["hello", 10, "john", "green", true];
+    // console.log(arr.length)
+
+//b) push method --> can add an element at the last
+    //  let arr = ["hello", 10, "john", "green", true];
+    //  arr.push('hii');
+    //  console.log(arr)
+//b) push method --> can remove an element at the last
+    //  let arr = ["hello", 10, "john", "green", true];
+    //  arr.pop();
+    //  console.log(arr) //['hello', 10, 'john', 'green']
+
+//c) unshift method --> can add an element at the start -->
+    //  let arr = ["hello", 10, "john", "green", true];
+    //  arr.unshift(11)
+    //  console.log(arr) //[11, 'hello', 10, 'john', 'green', true]
+
+// d)shift method --> can remove an element at start
+        //   let arr = ["hello", 10, "john", "green", true];
+        //   arr.shift()
+        //   arr.shift();
+        //   console.log(arr) //['john', 'green', true]
+        
+// e) slice --> can cut or copy a portion from array same as string method
+
+    //   let arr = ["hello", 10, "john", "green", true];
+    //   let ans = arr.slice(2 , 4);
+    //   console.log(ans)
+
+// f) splice method --> can add or remove element at any place in array
+    // splice(startIndex , no of element count you want to remove ,element name you want to add)
+
+    // remove element at any place
+    //   let arr = ["hello", 10, "john", "green", true];
+    //     arr.splice(2 ,1)
+    //     console.log(arr)
+
+    // add element at any place
+    // let arr = ["hello", 10, "john", "green", true];
+    //     arr.splice(3,0, "apple")
+    //     console.log(arr) //['hello', 10, 'john', 'apple', 'green', true]
+
+    // add or remove both or update a value -->
+    // let arr = ["hello", 10, "john", "green", true];
+    // // arr.splice(1,1,22)
+    // // console.log(arr)
+
+    // arr[1]  = 22;
+    // console.log(arr)
+
+
+
+// 
+//   let arr = ["hello", 10, "john", "green", true];
+//   for(let i=0; i<arr.length; i++){
+//     console.log(arr[i])
+//   }
+
+// Ques --> find the name of products whose price is between 15 to 50 thousand
+// let products = [
+//     {name:"iphone" , price:44000 , rating:4.5}, // 0
+//     {name:"samsung" , price:84000 , rating:5}, //1
+//     {name:"MI" , price:14000 , rating:3},  //2
+//     {name:"Nokia" , price:24000 , rating:2}, //3
+//     {name:"x-box" , price:54000 , rating:1}, //4
+//     {name:"realme" , price:4000 , rating:3.5}, //5
 // ]
+
+// for(let i=0 ; i<products.length ; i++){
+//     // console.log(products[i]) //{}
+//     if(products[i].price>=15000 && products[i].price<=50000){
+//         console.log(products[i].name)
+//     }
+// }    
+
+
+// let x = 10
+// let y = x
+
+
+    // let  arr = [10 ,20 ,30 , 40 ,50];
+
+    // let ans = [...arr]
+    // // let ans = arr;
+
+    // ans.push(66);
+
+    // console.log(ans) // []
+    // console.log(arr) // []
+
+// Spread Operator --> ...can copy the element of array or object into new array or object
+
+    //  let obj = {
+    //     name:"one",
+    //     email:"one@gmail.com"
+    //  }
+
+    //  let ans = {...obj}
+    //  console.log(ans)
+
+// **************************Object Methods ------------------
+// Add or update or delete value in Object --> 
+//   let obj = {
+//         name:"one",
+//         email:"one@gmail.com"
+//      }
+
+//      obj.course = "fullstack";
+//      obj.email = "john@gmail.com";
+//      obj['age'] = 44
+
+//      delete obj.name
+
+//      console.log(obj) // {name:one , email:"john@gmail.com", course:"fullstack", age:44}
+
+
+// Covert Object into String --> JSON.stringify() and JSON.parse()
+//   let data = {
+//         name:"one",
+//         email:"one@gmail.com"
+//      }
+
+//      let ans = JSON.stringify(data); // String Object
+//      console.log(ans)
+//      console.log(ans[0])
+//      console.log(typeof ans)
+
+
+// // convert string obect back into real Object --> JSON.parse()
+
+//      let ans2 = JSON.parse(ans);
+//      console.log(ans2)
+
+
+
+// Destructuring ->
+
+    //   let data = {
+    //     name:"one",
+    //     email:"one@gmail.com"
+    //  }
+
+    //  let a = data.name
+    //  let b = data.email;
+
+    //  let {name, email} = data  // destructuring
+    //  console.log(name)
+    //  console.log(email)
+
+    //  let array = [10, 20, 30, 40, 50, 60];
+    //  let [a,b,c,d,e,f]  = array // destructuring
+
+
+
+
+// Function --> a block of code used to run  a specific task . with the help of function you can reuse your code. a functions run only when something invokes it or calls it
+
+
+    // function xyz(a ,b){  //a and b are parameters
+    //     // console.log("hello")
+    //     // console.log(a)
+    //     // console.log(b)
+    //     console.log(a+b)
+    //     console.log(a*b)
+    // }
+
+    // xyz(10 , 12) // 10 and 20 are arguments 
+    // xyz(1 , 2) // 10 and 20 are arguments 
+    // xyz(4 , 5) // 10 and 20 are arguments 
+
+    // // console.log(xyz) //
+
+    // let x = function(){ // anonymous function(that do not have any name)
+    //     console.log("all is well")
+    // }
+
+    // x()
+
+    // // Arrow Function --> introduced in ES6
+
+    // let y = ()=>{
+    //     console.log("i am arrow function")
+    // }
+    // y()
+
+
+
+
+    // CallBack --> functions that are passed into another function as an argument are known as cb function
+    // function one(){
+    //     console.log("i am one")
+    // }
+    // function two(a,b,c,d,e){
+    //     console.log(a) //10
+    //     console.log(b) //"hello"
+    //     console.log(c) //[10, 20, 30]
+    //     console.log(d) //{name:"one"}
+    //     e()
+    // }
+    // two(10 , "hello" , [10, 20, 30] , {name:"one"} , one) //one is cb function
+
+
+
+
+// Timer function --> setTimeOut() , setInterval()
+
+// Syntax --> setInterval(cbFunction , time in ms)
+
+// let count = 0
+// function one(){
+//     count = count+1
+//     console.log("all is well "+count)
+// }
+
+// setInterval( one , 2000)
+
+// setInterval (function(){
+//     console.log("all good")
+// }  , 2000)
+
+// setInterval (()=>{
+//     console.log("this is arrow function")
+// }, 2000)
+
+
+
+// 
+
+
+// console.log("one")
+// console.log("two")
+// console.log("three")
+
+// setTimeout(()=>{
+//     console.log("dukaan pr gye")
+// } , 4000)
+
+// setTimeout(()=>{
+//     console.log("cold drink khareed li")
+// } , 1000)
+
+// setTimeout(()=>{
+//     console.log("ghar waps aa jana")
+// } , 3000)
+
+// console.log('coldrink pee li')
+
+// Promises --> are Objects and used to handle asynchronous task in javascript. it take a callback function with two arguments resolve and reject. if promise is fullfilled you can get the resolved output in (.then) part if promise is rejected you can get your rejected output in (.catch) part.  promises have three states pending fullfilled , and rejected.
+
+// Syntax -->  let variableName =  newPromise((resolve, reject)=>{
+                                        //resolve()  or reject()
+                                    // })
+
+
+        
+// let x = new Promise((resolve, reject) => {
+
+//     reject("hello i am resolved promise")
+// })
+
+// x.then((ans)=>console.log(ans))
+// .catch((ans)=>console.log(ans))
+// .then(()=>console.log("i am two"));
+
+// console.log("i am two")
+
+
+// console.log(x)  // --> x is a promise
+
+
+// fetch --> used to send hhtp network request to server . it return a promise
+
+
+// let res = fetch('API')
+// let res = fetch('https://dummyjson.com/products')
+// res.then((ans) =>ans.json()).then((ans)=>console.log(ans))
+// .catch((ans)=>console.log(ans))
+
+
+// async function xyz(){
+//         let res = await fetch('https://dummyjson.com/products')
+//         let data = await res.json();
+//         console.log(data) //{}
+//         console.log(data.products) //{}
+// }
+
+// xyz();
+
+
+// document.write(<h1>hello</h1>)
+
 
 
 
