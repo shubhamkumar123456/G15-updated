@@ -1,4 +1,9 @@
 //a) create a new React Project --> npm create vite@latest
+        // -- enter project name
+        // -- select react framework
+        // -- selecct java script variant
+        // -- select ES Lint
+        // -- select yes
 //b) run react project --> npm run dev
 //c) change directory or folder --> cd folderName  or cd..
 //d) install any third party library or package in react --> npm i packageName
@@ -33,3 +38,4 @@
 // Controlled component --> controlled component is a form element whose value is controlled by react state and onchange event
 
 // useEffect Hook --> useEffect hook is used to run side effect such as updating the dom element , fetching api etc.
+
