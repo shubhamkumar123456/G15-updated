@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
     
       <div className='grid px-10 gap-3 lg:grid-cols-4  md:grid-cols-2 grid-cols-1'>
         {
