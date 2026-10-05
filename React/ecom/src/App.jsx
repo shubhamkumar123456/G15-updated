@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import SignupPage from './pages/SignupPage'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
+import ViewDetails from './pages/ViewDetails'
 
 const App = () => {
   let loginValue = false;
@@ -23,6 +24,7 @@ const App = () => {
                 <Route path='/xyz' element={<Contact/>}/>
                 <Route path='/login'  element={<Login/>}/>
                 <Route path='/register' element={<SignupPage/>}/>
+                <Route path='/view' element={<ViewDetails/>}/>
           </Routes>
       </BrowserRouter>
     </div>
