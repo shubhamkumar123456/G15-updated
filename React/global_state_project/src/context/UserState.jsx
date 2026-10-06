@@ -12,7 +12,7 @@ const UserState = (props) => {
 
     let x = 10;
 
-    let y = [10, 20, 30, 40]
+    let y = [10, 20, 30, 40];
 
 
   return (
