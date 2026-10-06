@@ -37,5 +37,26 @@
 
 // Controlled component --> controlled component is a form element whose value is controlled by react state and onchange event
 
+// uncontrolled component --> component in which form element is directly controlled by DOM. for example  use ref can diretly manipulate the DOM
+
 // useEffect Hook --> useEffect hook is used to run side effect such as updating the dom element , fetching api etc.
 
+// context Api -->with the help of context api you can define global state in your react application (data can be available for all component , no need to pass through props). it can also avoid props drilling
+
+// Steps to create Global State using context api -->
+        // a)create a context file --> using createContext
+        // b) create a state file (for addig , updating and deleting the data inside context this file is for data management in context api)
+        // c) after creating state file create a component using rafce
+        // d) import context file inside state file
+        // e) create a contextProvider and pass value example --> 
+                        // <UserContext.Provider value={{x, obj}}>
+                        //                 {props.children}
+                        // </UserContext.Provider>
+        // f) wrap app file inside the state file in main.js example -->
+
+                //  <UserState>
+                //          <App />
+                // </UserState>
+
+        //g) to access this global state data in any page --> useContext hook is available example --> 
+        // let ctx = useContext(UserContext)
