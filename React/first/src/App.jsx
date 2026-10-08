@@ -11,6 +11,8 @@ import { FaFacebook } from "react-icons/fa";
 import Form1 from './Form1'
 import Form2 from './Form2'
 import EffectHook from './EffectHook'
+import ReducerHookPractice from './ReducerHookPractice'
+import ReducerPractice2 from './ReducerPractice2'
 // import X from './Demo'
 
 function App() {
@@ -47,7 +49,10 @@ function App() {
      {/* <Form2/> */}
 
 
-  <EffectHook/>
+  {/* <EffectHook/> */}
+
+  {/* <ReducerHookPractice/> */}
+  <ReducerPractice2/>
 
     </>
   )
