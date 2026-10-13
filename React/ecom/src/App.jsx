@@ -7,6 +7,7 @@ import SignupPage from './pages/SignupPage'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ViewDetails from './pages/ViewDetails'
+import ProtectedRoute from './components/ProtectedRoute'
 
 const App = () => {
   let loginValue = false;
@@ -19,12 +20,19 @@ const App = () => {
       <BrowserRouter>
         <Navbar/>
           <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/sorts' element={<About/>}/>
+                <Route path='/' element={<ProtectedRoute>
+                  <Home/>
+                </ProtectedRoute>}/>
+
+                <Route path='/sorts' element={<ProtectedRoute>
+                  <About/>
+                </ProtectedRoute>}/>
                 <Route path='/xyz' element={<Contact/>}/>
                 <Route path='/login'  element={<Login/>}/>
                 <Route path='/register' element={<SignupPage/>}/>
-                <Route path='/view' element={<ViewDetails/>}/>
+                <Route path='/view' element={<ProtectedRoute>
+                  <ViewDetails/>
+                </ProtectedRoute>}/>
           </Routes>
       </BrowserRouter>
     </div>
